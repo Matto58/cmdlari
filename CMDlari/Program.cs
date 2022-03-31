@@ -55,7 +55,7 @@
                 grade = "Neznámá hodnota";
             }
 
-            return grade;
+            return "Známka: " + grade;
         }
         public static string grades2avg(string n)
         {
@@ -145,8 +145,7 @@
         public static void Main(string[] args)
         {
             info.version iv = new info.version();
-            Console.WriteLine("Vítejte v CMDlářích");
-            Console.Write("Verze: ");
+            Console.Write("Vítejte v CMDlářích, ");
             if (iv.dev)
             {
                 Console.Write("vývojářská ");
@@ -159,12 +158,20 @@
                 case 1:
                     Console.Write("beta ");
                     break;
-                default:
+                case 2:
+                    Console.Write("verze ");
                     break;
             }
             Console.Write(iv.major + "." + iv.minor + "." + iv.patch + "\n");
             Console.WriteLine("Sestavení " + iv.build + "\n");
-            if (args.Length < 2)
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Použití: cmdlari [příkaz] [parametry]");
+                Console.WriteLine("Příkazy: průměr na známku (-pz/--prumer-na-znamku) -- známky na průměr (-zp/--znamky-na-prumer)");
+                Console.WriteLine("Parametry: [průměr známek] (-pz/--prumer-na-znamku) -- [počet známek] (-zp/--znamky-na-prumer)");
+
+            }
+            else if (args.Length < 3 && args.Length != 0)
             {
                 Console.WriteLine("Není zadáno dostatek argumentů");
                 return;
@@ -203,7 +210,26 @@
             public int major = 0;
             public int minor = 1;
             public int patch = 0;
-            public int build = 1;
+            public int build = 6;
+        }
+    }
+    // use these translations later
+    public class lang {
+        public class CZ_cs {
+            public string welcome = "Vítejte v CMDlářích, ";
+            public string build = "Sestavení ";
+            public string alpha = "alfa ";
+            public string beta = "beta ";
+            public string release = "verze ";
+            public string dev = "vývojářská ";
+        }
+        public class US_en {
+            public string welcome = "Welcome to CMDláři, ";
+            public string build = "Build ";
+            public string alpha = "alpha ";
+            public string beta = "beta ";
+            public string release = "version ";
+            public string dev = "developer ";
         }
     }
 }
