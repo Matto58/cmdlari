@@ -1,4 +1,4 @@
-﻿public class cmdlari
+public class cmdlari
 {
     public class app
     {
