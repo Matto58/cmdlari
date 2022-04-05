@@ -162,17 +162,17 @@ public class cmdlari
                 Console.WriteLine("CMDláři " + iv.id);
 
                 Console.WriteLine("Použití: cmdlari [jazyk] [příkaz] [parametry]");
-                Console.WriteLine("Jazyky: čeština, angličtina, němčina");
+                Console.WriteLine("Jazyky: čeština (-cz), angličtina (-en), němčina (-de)");
                 Console.WriteLine("Příkazy:\nprůměr na známku (-pz/--prumer-na-znamku)\nznámky na průměr (-zp/--znamky-na-prumer)\nznámky na průměr s mínusem (-zpm/--znamky-na-prumer-s-minusem)\n");
                 Console.WriteLine("Parametry:\n[průměr známek] (-pz/--prumer-na-znamku)\n[počet známek] (-zp/--znamky-na-prumer/--zpm/--znamky-na-prumer-s-minusem)\n");
 
-                Console.WriteLine("Usage: cmdlari [command] [parameters]");
-                Console.WriteLine("Languages: Czech, English, German");
+                Console.WriteLine("Usage: cmdlari [language] [command] [parameters]");
+                Console.WriteLine("Languages: Czech (-cz), English (-en), German (-de)");
                 Console.WriteLine("Commands:\naverage to grade (-pz/--prumer-na-znamku)\ngrades to average (-zp/--znamky-na-prumer)\ngrades to average with minus (-zpm/--znamky-na-prumer-s-minusem)\n");
                 Console.WriteLine("Parameters:\n[average grade] (-pz/--prumer-na-znamku)\n[number of grades] (-zp/--znamky-na-prumer/--zpm/--znamky-na-prumer-s-minusem)\n");
                 
-                Console.WriteLine("Verwendung: cmdlari [Befehl] [Parameter]");
-                Console.WriteLine("Sprache: Tschechisch, Englisch, Deutsch");
+                Console.WriteLine("Verwendung: cmdlari [Sprache] [Befehl] [Parameter]");
+                Console.WriteLine("Sprache: Tschechisch (-cz), Englisch (-en), Deutsch (-de)");
                 Console.WriteLine("Befehle:\nDurchschnitt zu Note (-pz/--prumer-na-znamku)\nNoten zu Durchschnitt (-zp/--znamky-na-prumer)\nNoten zu Durchschnitt mit Minus (-zpm/--znamky-na-prumer-s-minusem)\n");
                 Console.WriteLine("Parameter:\n[Durchschnitt Note] (-pz/--prumer-na-znamku)\n[Anzahl Noten] (-zp/--znamky-na-prumer/--zpm/--znamky-na-prumer-s-minusem)\n");
             }
@@ -366,7 +366,7 @@ public class cmdlari
             public int major = 0;
             public int minor = 2;
             public int patch = 0;
-            public int build = 16;
+            public int build = 17;
             public int id = 220405;
         }
     }
