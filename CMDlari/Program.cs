@@ -61,7 +61,6 @@ public class cmdlari
         public static string grades2avg(string n, bool minus)
         {
             double average = 0;
-            double n3 = 0;
             bool mistake = false;
             int n2 = int.Parse(n);
             
@@ -145,7 +144,7 @@ public class cmdlari
             if (n2 != 0)
             {
                 average /= n2;
-                return (average / n3).ToString();
+                return average.ToString();
             }
             else
             {
@@ -365,9 +364,9 @@ public class cmdlari
             public bool dev = false;
             public string codename = "Delfín";
             public int major = 0;
-            public int minor = 1;
-            public int patch = 1;
-            public int build = 15;
+            public int minor = 2;
+            public int patch = 0;
+            public int build = 16;
             public int id = 220405;
         }
     }
